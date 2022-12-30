@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Objects;
 
-public class Speed {
+public class Speed implements Comparable<Speed> {
     final static int MIN = 0;
     final int speed;
 
@@ -24,5 +24,16 @@ public class Speed {
     @Override
     public int hashCode() {
         return Objects.hash(speed);
+    }
+
+    @Override
+    public int compareTo(Speed o) {
+        if (this.speed < o.speed) {
+            return -1;
+        }
+        if (this.speed > o.speed) {
+            return 1;
+        }
+        return 0;
     }
 }
