@@ -41,6 +41,11 @@ public class HitPoint {
     }
 
     @Override
+    public String toString() {
+        return String.valueOf(this.currentAmount);
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof HitPoint)) {
             return false;
@@ -48,4 +53,6 @@ public class HitPoint {
         HitPoint hp = (HitPoint) obj;
         return this.currentAmount == hp.currentAmount;
     }
+
+
 }
